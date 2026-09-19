@@ -362,3 +362,12 @@ h2::after{content:'';display:block;width:56px;height:3px;margin:14px auto 0;back
 .card{width:calc((100% - 48px) / 3)}
 @media screen and (max-width:1024px){.card{width:calc((100% - 24px) / 2)}}
 @media screen and (max-width:767.98px){.card{width:100%}.hero h1{font-size:22px}}
+.card{box-sizing:border-box}
+@media screen and (min-width:1025px){body:has(.hero){margin-top:80px}}
+@media screen and (min-width:768px) and (max-width:1024px){body:has(.hero){margin-top:70px}}
+.form-simple{padding:34px 0 10px}
+.form-simple form{width:86%}
+.form-simple textarea{width:100%;box-sizing:border-box;border-radius:10px;padding:10px;font-family:inherit;font-size:15px}
+.form-simple label{font-size:16px;font-weight:500}
+.form-simple button{width:100%;margin:10px 0 24px;padding:14px;font-size:16px;font-weight:600;letter-spacing:.5px}
+@media screen and (max-width:767.98px){.form-simple .inline-container{flex-direction:column;gap:0}.form-simple .inline-item{width:100%}.form-simple form{width:88%}}

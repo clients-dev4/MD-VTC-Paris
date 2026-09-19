@@ -390,127 +390,54 @@
             <a class="bouton-3" href="tarif-chauffeur-prive.html" title="tarifs chauffeur privé">VOIR LES TARIFS</a>
         </section>
         <h2 id="devis">DEMANDE DE DEVIS</h2>
-        <div class="form-container">
-            <div class="image-container">
-                <img src="./logo/img-form-light.webp" alt="devis chauffeur privé Paris md vtc" title="devis md vtc" loading="lazy" decoding="async">
-            </div>
+        <p class="section-intro">Hôtel, ambassade ou entreprise : décrivez votre besoin, je vous réponds rapidement avec une proposition sur mesure.</p>
+        <div class="form-container form-simple">
             <form id="contactForm" action="https://webprime.app/webhook/contact/272e326a45cd4bac546192db1418b56149a9d7c18271dc7a4506eafcfe8ab524" method="POST" onsubmit="return sendBoth(event)">
                 <div class="hp-wrap">
                     <label for="website">Votre site web :</label>
                     <input type="text" id="website" name="_honey" autocomplete="off">
                 </div>
-
-                <div class="form-progress">
-                    <div class="form-progress-bar"><span id="formProgressFill"></span></div>
-                    <div class="form-progress-label">Étape <span id="formStepNum">1</span>/3 &middot; <span id="formStepName">Votre trajet</span></div>
-                </div>
-
-                <div class="form-step" data-name="Votre trajet">
-                    <label for="prestation">Prestation</label>
-                    <select id="prestation" name="prestation">
-                        <option value="Transfert aeroport">Transfert aéroport</option>
-                        <option value="Mise a disposition">Mise à disposition</option>
-                        <option value="Deplacement pro">Déplacement professionnel</option>
-                        <option value="Trajet Prive">Trajet Privé</option>
-                        <option value="Chauffeur Sec">Chauffeur Sec</option>
-                        <option value="Tourisme">Tourisme</option>
-                        <option value="Bodyguard">Bodyguard</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-
-                    <label for="departure1">Départ</label>
-                    <input type="text" id="departure1" name="lieu_depart" required>
-
-                    <label for="arrival1">Arrivée</label>
-                    <input type="text" id="arrival1" name="lieu_arrivee" required>
-
-                    <label for="numero">Numéro de vol ou train</label>
-                    <input type="text" id="numero" name="numero">
-
-                    <div class="inline-container">
-                        <div class="inline-item">
-                            <label for="date">Date</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="inline-item">
-                            <label for="heure">Heure</label>
-                            <input type="time" id="heure" name="heure" required>
-                        </div>
+                <div class="inline-container">
+                    <div class="inline-item">
+                        <label for="name">Nom / Prénom</label>
+                        <input type="text" id="name" name="nom" autocomplete="name" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
+                    </div>
+                    <div class="inline-item">
+                        <label for="societe">Établissement / Société</label>
+                        <input type="text" id="societe" name="societe" autocomplete="organization">
                     </div>
                 </div>
-
-                <div class="form-step" data-name="Passagers &amp; bagages">
-                    <div class="inline-container">
-                        <div class="inline-item">
-                            <label for="passengers">Adultes</label>
-                            <select id="passengers" name="passagers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
-                        </div>
-                        <div class="inline-item">
-                            <label for="children">Enfants</label>
-                            <select id="children" name="enfants">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
+                <div class="inline-container">
+                    <div class="inline-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
-
-                    <div class="inline-container">
-                        <div class="inline-item">
-                            <label for="luggage">Bagages</label>
-                            <select id="luggage" name="bagages">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="inline-item">
-                            <label for="car-seats">Sièges auto</label>
-                            <select id="car-seats" name="sieges_auto">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="inline-item">
-                            <label for="rehausseur">Rehausseur</label>
-                            <select id="rehausseur" name="rehausseur">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
+                    <div class="inline-item">
+                        <label for="tel">Téléphone</label>
+                        <input type="tel" id="tel" name="tel" autocomplete="tel" required pattern="[+]?[0-9 .\(\)\-]{8,20}" maxlength="20" title="Numéro français ou international, par exemple +33 6 12 34 56 78">
                     </div>
                 </div>
-
-                <div class="form-step" data-name="Vos coordonnées">
-                    <label for="name">Nom / Prénom</label>
-                    <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
-
-                    <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="^((\+33|0)[1679])[0-9]{8}$" maxlength="12" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="comments">Commentaires</label>
-                    <textarea id="comments" name="commentaires" rows="4"></textarea>
+                <div class="inline-container">
+                    <div class="inline-item">
+                        <label for="prestation">Prestation</label>
+                        <select id="prestation" name="prestation">
+                            <option value="Transfert aeroport">Transfert aéroport / gare</option>
+                            <option value="Mise a disposition">Mise à disposition</option>
+                            <option value="Deplacement pro">Déplacement professionnel</option>
+                            <option value="Chauffeur Sec">Chauffeur sec</option>
+                            <option value="Bodyguard">Protection rapprochée</option>
+                            <option value="Partenariat">Partenariat / contrat entreprise</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="inline-item">
+                        <label for="date">Date souhaitée (facultatif)</label>
+                        <input type="date" id="date" name="date">
+                    </div>
                 </div>
-
-                <div class="form-nav">
-                    <button type="button" class="form-prev" id="formPrev">Précédent</button>
-                    <button type="button" class="form-next" id="formNext">Suivant</button>
-                    <button type="submit" class="form-submit" id="formSubmit">ENVOYER</button>
-                </div>
+                <label for="comments">Votre demande</label>
+                <textarea id="comments" name="commentaires" rows="5" placeholder="Trajet, nombre de passagers, horaires, besoins particuliers..."></textarea>
+                <button type="submit">ENVOYER MA DEMANDE</button>
             </form>
             <div class="contact-thanks" style="display:none; padding: 30px 20px; background-color: #e8f5e9; border: 2px solid #2e7d32; border-radius: 8px; text-align: center; margin-top: 20px;">
                 <h3 style="color: #2e7d32; margin: 0 0 10px 0;">Merci pour votre demande !</h3>
@@ -641,7 +568,11 @@
         webhookData.append('email', email);
         webhookData.append('tel', tel);
         webhookData.append('service', prestation);
-        var msg = 'Prestation : ' + prestation
+        var societe = (form.querySelector('[name="societe"]') || {}).value || '';
+        var msg = form.querySelector('[name="societe"]') ? 'Societe : ' + societe
+            + '\nPrestation : ' + prestation
+            + '\nDate souhaitee : ' + date
+            + '\n\nDemande : ' + commentaires : 'Prestation : ' + prestation
             + '\nDepart : ' + depart
             + '\nArrivee : ' + arrivee
             + '\nNumero de vol/train : ' + numero
