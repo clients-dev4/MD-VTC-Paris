@@ -405,3 +405,16 @@ main>.texte1 p,main>section>.texte1 p,.texte1 p{margin:0 20px 16px;font-size:16p
 }
 @media screen and (min-width:1025px){.p-slide{max-width:1240px;gap:22px}.p-slide .slide p{padding:22px 22px 24px;font-size:14.5px;line-height:1.95}}
 .p-slide .slide p strong{white-space:nowrap}@media screen and (min-width:1025px){.p-slide .slide p{font-size:14px;padding:22px 20px 24px}}
+/* Hero mobile en bleu nuit (la photo se fond dans le bleu au lieu du blanc) */
+@media screen and (max-width:767.98px){
+.hero{background:#0f2342}
+.hero-portrait{background:transparent}
+.hero h1{color:#fff}
+.hero-line.blue{color:#d4b06a}
+.hero .hero-text{color:rgba(255,255,255,.82)}
+.hero-btn-blue{background:linear-gradient(135deg,#c29b4a 0%,#9a7630 100%);color:#fff;box-shadow:0 4px 15px rgba(0,0,0,.25)}
+.hero-btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.hero-trust-text{color:rgba(255,255,255,.65)}
+.hero-portrait-badge{box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.refs{border-top:1px solid rgba(255,255,255,.12);margin-top:0}
+}
