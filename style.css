@@ -252,7 +252,8 @@ form{width:85%}
 .hero-right{width:100%;height:65vh}
 .hero-portrait{max-width:none;height:100%;border-radius:0;background:#fff}
 .hero-portrait img{height:100%}
-.hero-portrait::after{top:0;bottom:-3px;height:auto;background:linear-gradient(to bottom,transparent 0%,transparent 55%,rgba(255,255,255,0.7) 80%,#fff 93%,#fff 100%)}
+.hero-portrait::after{display:none}
+.hero-portrait img{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 55%,rgba(0,0,0,0.35) 80%,transparent 94%);mask-image:linear-gradient(to bottom,#000 0%,#000 55%,rgba(0,0,0,0.35) 80%,transparent 94%)}
 .hero-portrait-border{display:none}
 .hero-portrait-badge{z-index:5;margin-top:-18px;padding:10px 28px;border-radius:50px;white-space:nowrap;box-shadow:0 4px 20px rgba(17,24,39,0.15)}
 .hero-portrait-name{font-size:14px}
